@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: #2f2f2f;
+}
+
+h2 {
+  text-align: center;
+  color: #0269c9;
+}
+
+hr {
+    border: 1px solid #0269c9;
+}
+
+.factura-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #0269c9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #2f2f2f;
+}
+
+input[type="button"],
+button {
+  background-color: #0269c9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: auto;
+  display: block;
+  text-align: left;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background-color: #007bee;
+}
+
+.producto {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.producto input,
+.producto select {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .factura-container {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 8px;
+  }
+
+  input[type="button"],
+  button {
+    padding: 8px 16px;
+  }
+}

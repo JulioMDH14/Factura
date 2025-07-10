@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="acciones.js"></script>
+</head>
+
+<body>
+    <h2>Factura</h2>
+    <div class="factura-container">
+        <p>Número de Factura <br><input type="text" id="numeroFactura" placeholder="Número de Factura" readonly></p>
+        <p>Serie <br><input type="text" id="serieFactura" placeholder="Serie"></p>
+        <p>Fecha de Expedición <br><input type="date" id="fechaExpedicion"></p>
+        <hr>
+        <h3>Datos del Emisor</h3>
+        <p>Nombre/Razón Social <br><input type="text" id="nombreEmisor" placeholder="Nombre/Razón Social"></p>
+        <p>NIF <br><input type="text" id="nifEmisor" placeholder="NIF"></p>
+        <p>Dirección <br><input type="text" id="direccionEmisor" placeholder="Dirección"></p>
+        <hr>
+        <h3>Datos del Receptor</h3>
+        <p>Nombre/Razón Social <br><input type="text" id="nombreReceptor" placeholder="Nombre/Razón Social"></p>
+        <p>NIF <br><input type="text" id="nifReceptor" placeholder="NIF"></p>
+        <p>Dirección <br><input type="text" id="direccionReceptor" placeholder="Dirección"></p>
+        <hr>
+        <p>Fecha de Operaciones <br><input type="date" id="fechaOperaciones"></p>
+        <div id="productosContainer">
+            <div class="producto">
+                <input type="text" class="nombreProducto" placeholder="Descripción del Producto">
+                <input type="number" class="precio" placeholder="Precio Unitario" min="5.00" max="99.99">
+                <input type="number" class="cantidad" placeholder="Cantidad" min="1" max="99">
+                <select class="tipoImpositivo">
+                    <option value="21">21%</option>
+                    <option value="10">10%</option>
+                    <option value="4">4%</option>
+                </select>
+            </div>
+        </div>
+        <input type="button" onclick="agregarProducto()" value="Agregar Producto">
+        <input type="button" onclick="generarFactura()" value="Generar Factura">
+    </div>
+</body>
+
+</html>
